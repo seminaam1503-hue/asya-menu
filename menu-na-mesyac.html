@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Система Аси — меню на месяц: выгляжу на миллион, трачу копейки</title>
+<meta name="description" content="Меню на 28 дней для семьи из 4 человек от ИИ-бабушки Аси: 75 блюд из кафе и ресторанов из продуктов магазина у дома, списки покупок, калькулятор и 3 бонуса. Электронный PDF.">
+<meta property="og:title" content="Система Аси — меню на месяц">
+<meta property="og:description" content="Том-ям, хачапури, синнабон из лаваша. 75 блюд из кафе из продуктов магазина у дома.">
+<meta property="og:image" content="img/menu-asya.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="index.html">Система <em>Аси</em></a>
+  <nav><a href="index.html">Все меню Аси</a><a href="#vnutri">Загляни внутрь</a><a href="#nedeli">Недели</a><a href="#bonusy">Бонусы</a></nav>
+  <a class="top-btn" href="#kupit">Купить · 490 ₽</a>
+</header>
+
+<!-- ОБЛОЖКА -->
+<section class="hero">
+
+  <div class="hero-text">
+    <p class="kicker">Журнал Аси · выпуск №1 · меню на месяц</p>
+    <h1><span class="l1">Выгляжу</span> <span class="l2">на миллион,</span> <span class="l3">трачу копейки</span></h1>
+    <p class="lead">28 дней ужинов, как в кафе и ресторанах, из продуктов магазина у дома. Для семьи из четырёх человек.</p>
+    <div class="cta-row">
+      <a class="btn" href="#kupit">Хочу меню за 490 ₽</a>
+      <a class="btn ghost" href="#vnutri">Сначала загляну внутрь ↓</a>
+    </div>
+  </div>
+  <div class="hero-pic"><img src="img/menu-asya.jpg" alt="Ася подаёт котлету по-киевски, как официант в ресторане" width="896" height="1120"></div>
+  <div class="sticker s1"><b>75</b>блюд<br>из кафе</div>
+  <div class="sticker s2"><b>28</b>дней без скучных ужинов</div>
+</section>
+
+
+<!-- КАФЕ vs АСЯ -->
+<section class="sec vs">
+  <div class="wrap">
+    <p class="eyebrow">Нажми на карточку</p>
+    <h2>В кафе это называется модно.<br><em>А у Аси это…</em></h2>
+    <div class="flips" id="flips"></div>
+  </div>
+</section>
+
+<!-- ЗАГЛЯНИ ВНУТРЬ -->
+<section class="sec inside" id="vnutri">
+  <div class="wrap">
+    <p class="eyebrow">Примерка меню</p>
+    <h2>Загляни внутрь.<br><em>Один день из каждой недели</em></h2>
+    <p class="sub">Четыре дня открыты как пробник. Остальные 24 дня, списки покупок и рецепты с граммовкой ждут в самом меню.</p>
+    <div class="wtabs" id="wtabs"></div>
+    <div class="dtabs" id="dtabs"></div>
+    <div class="day" id="day"></div>
+  </div>
+</section>
+
+<!-- ЛИСТАЛКА СТРАНИЦ -->
+<section class="sec pages">
+  <div class="wrap">
+    <p class="eyebrow light">Так выглядит файл</p>
+    <h2>121 страница, и каждая <em>кликается</em></h2>
+    <p class="sub">Нажимаешь на день и попадаешь в рецепт. Галочки в списке покупок, звёздочки и калькулятор работают прямо в файле. Вот как он выглядит, а всё самое вкусное внутри.</p>
+  </div>
+  <div class="strip" id="strip"></div>
+  <div class="swipe"><button type="button" class="sw-btn" id="swPrev" aria-label="Предыдущие страницы">←</button><span>листай</span><button type="button" class="sw-btn" id="swNext" aria-label="Следующие страницы">→</button></div>
+</section>
+
+<!-- НЕДЕЛИ -->
+<section class="sec weeks" id="nedeli">
+  <div class="wrap">
+    <p class="eyebrow">Четыре недели, четыре характера</p>
+    <h2>Месяц, где у каждой недели <em>свой характер</em></h2>
+  </div>
+  <div class="wk-list" id="wklist"></div>
+</section>
+
+<!-- В КАЖДОЙ НЕДЕЛЕ -->
+<section class="sec every">
+  <div class="wrap">
+    <h2>В каждой неделе <em>всё уже придумано</em></h2>
+    <ul class="every-grid">
+      <li><span class="ic">🗓</span><b>Меню на 7 дней</b>Завтрак, суп на обед (сразу на 2 дня) и горячий ужин. Хиты недели отмечены звёздочкой.</li>
+      <li><span class="ic">🛒</span><b>Один список покупок</b>Один поход в магазин на всю неделю, с галочками прямо в файле.</li>
+      <li><span class="ic">🧮</span><b>Калькулятор</b>Вписываешь суммы из чеков и видишь, во сколько обошлись день и одна порция.</li>
+      <li><span class="ic">⏱</span><b>30 минут в воскресенье</b>Короткая подготовка, чтобы в будни не стоять у плиты.</li>
+      <li><span class="ic">🌙</span><b>«Вечером на завтра»</b>Ася напомнит, что достать из морозилки и что замочить.</li>
+      <li><span class="ic">💡</span><b>Хитрости Аси</b>Один продукт — три блюда, и ничего не выбрасываем.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- БОНУСЫ -->
+<section class="sec bonus" id="bonusy">
+  <div class="wrap">
+    <p class="eyebrow light">И ещё подарки</p>
+    <h2>Три бонуса <em>внутри</em></h2>
+    <div class="bn-grid">
+      <article><div class="bn-ph"><img src="img/bonus-1.jpg" alt="Морозилка с домашними заготовками" loading="lazy"><span class="bn-st c1"><b>6</b>заготовок</span></div><span class="tag">Бонус 1</span><h3>«Морозилка Аси»</h3><p>Один день у плиты, и весь месяц достаёшь готовое из морозилки.</p></article>
+      <article><div class="bn-ph"><img src="img/bonus-2.jpg" alt="Шпаргалка на дверце холодильника" loading="lazy"><span class="bn-st c2"><b>1</b>лист</span></div><span class="tag">Бонус 2</span><h3>«Шпаргалка на холодильник»</h3><p>Сколько хранятся продукты и чем заменить то, чего нет дома. Распечатай и повесь на магнит.</p></article>
+      <article><div class="bn-ph"><img src="img/bonus-3.jpg" alt="Домашние десерты к чаю" loading="lazy"><span class="bn-st c3"><b>8</b>десертов</span></div><span class="tag">Бонус 3</span><h3>«Сладкое без кондитерской»</h3><p>Десерты из того, что уже лежит в шкафу.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- КОРОТКО ОБ АСЕ -->
+<section class="sec mini-about">
+  <div class="wrap mini-in">
+    <figure class="pol solo"><img src="img/asya-rynok.jpg" alt="Ася на рынке с помидором" width="700" height="875"><figcaption>На рынке я не покупаю, я веду переговоры.</figcaption></figure>
+    <div>
+      <p class="eyebrow">Кто готовит</p>
+      <h2>Ася, <em>за семьдесят</em></h2>
+      <p class="big">«Красивый ужин не значит дорогой. Я это проверяю каждый вечер».</p>
+      <p>Внучка показывает мне блюда из модных кафе, а я переодеваю их в продукты из магазина у дома. Так и родилась эта система.</p>
+      <a class="more" href="index.html#asya">Подробнее про Асю →</a>
+      <p class="ai">Ася — ИИ-персонаж: её образ и фото созданы с помощью нейросети. Рецепты — домашние версии известных блюд. Фото блюд тоже сгенерированы и могут отличаться от того, что получится у тебя.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ПОКУПКА -->
+<section class="sec buy" id="kupit">
+  <div class="ticket">
+    <div class="t-left">
+      <p class="eyebrow light">Билет на месяц вкусных ужинов</p>
+      <h2>«Система Аси. <em>Меню на месяц»</em></h2>
+      <ul class="get">
+        <li>Электронный файл PDF, 121 страница. Читается с телефона, можно распечатать.</li>
+        <li>75 рецептов, 4 списка покупок, 4 калькулятора и 3 бонуса.</li>
+        <li>Оплата картой и другими способами через ЮKassa, чек приходит на почту.</li>
+        <li>Файл приходит на почту, указанную при оплате, в течение 24 часов. Обычно быстрее.</li>
+      </ul>
+    </div>
+    <div class="t-right">
+      <p class="price">490 ₽</p>
+      <p class="price-note">цена для первых покупателей,<br>потом будет 690 ₽</p>
+      <label class="agree"><input type="checkbox" id="agree"> <span>Я принимаю условия <a href="oferta.html">оферты</a> и даю <a href="soglasie.html">согласие на обработку персональных данных</a> в соответствии с <a href="privacy.html">политикой</a>.</span></label>
+      <a class="btn big disabled" id="paybtn" href="#" aria-disabled="true">Перейти к оплате</a>
+      <p class="hint" id="payhint">Отметь галочку, чтобы перейти к оплате.</p>
+      <p class="hint">Вопросы и возвраты: <a href="mailto:asya.menu@yandex.ru">asya.menu@yandex.ru</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ДРУГИЕ МЕНЮ -->
+<section class="sec other">
+  <div class="wrap other-in">
+    <div>
+      <p class="eyebrow light">У Аси будут и другие меню</p>
+      <h2>«Новогодний стол <em>на миллион»</em> выйдет 1 декабря</h2>
+      <p>А потом «Россия на тарелке»: Север, Юг и Кавказ.</p>
+    </div>
+    <a class="btn" href="index.html">Все меню Аси</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Продавец:</b> Семина Анастасия Михайловна, самозанятая (налог на профессиональный доход), ИНН 325002830399, г. Москва.<br>
+    <b>Почта:</b> <a href="mailto:asya.menu@yandex.ru">asya.menu@yandex.ru</a> · <b>Telegram:</b> <a href="https://t.me/asya_na_million">t.me/asya_na_million</a></p>
+    <p class="docs"><a href="index.html">Все меню Аси</a> · <a href="oferta.html">Публичная оферта</a> · <a href="privacy.html">Политика обработки персональных данных</a> · <a href="soglasie.html">Согласие на обработку персональных данных</a></p>
+    <p class="small">Ася — ИИ-персонаж. Материалы носят информационный характер и не являются медицинской или диетологической рекомендацией.</p>
+  </div>
+</footer>
+
+<a class="float-buy" href="#kupit">Купить меню · 490 ₽</a>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
