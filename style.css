@@ -469,3 +469,8 @@ body { background:var(--paper); }
 @media (max-width: 600px) { .logo { white-space:nowrap; font-size:19px; } .top { padding:10px 16px; gap:12px; } .top-btn { font-size:13px; padding:9px 14px; } }
 .s2 { right:max(330px, calc((100vw - 1180px)/2 + 400px)); bottom:36px; }
 .card.ny .card-pic img { object-position:center 12%; }
+/* главные кнопки — фирменный вишнёвый Аси */
+:root { --cherry:#A52A3A; --cherry2:#8C2131; }
+.btn:not(.ghost), .gift .btn, .top-btn, .float-buy { background:var(--cherry) !important; color:#fff !important; border-color:var(--cherry) !important; }
+.btn:not(.ghost):hover, .top-btn:hover { background:var(--cherry2) !important; }
+.btn.disabled { opacity:.5; }
