@@ -482,3 +482,58 @@ body { background:var(--paper); }
   .strip img { width:72vw; }
   .strip img:nth-child(odd), .strip img:nth-child(even) { transform:none; }
 }
+/* ровные цифры везде (у Playfair «1» иначе маленькая) */
+body, h1, h2, h3, b, .price, .card-price, .wk-n { font-variant-numeric:lining-nums; font-feature-settings:"lnum" 1; }
+/* все кнопки ведут себя одинаково: мягко приподнимаются при наведении */
+.btn, .top-btn, .wtab, .dtab, .wk-t .go, .sw-btn, .gift .btn { transition:transform .15s ease, box-shadow .15s ease, background .15s ease; }
+.btn:hover, .top-btn:hover, .wtab:hover, .dtab:not(.on):hover, .wk-t .go:hover, .sw-btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(59,42,53,.2); }
+.btn:active, .top-btn:active, .wtab:active, .dtab:not(.on):active, .wk-t .go:active, .sw-btn:active { transform:translateY(0); box-shadow:none; }
+.btn.disabled:hover { transform:none; box-shadow:none; }
+/* ноутбук: каждый блок помещается в один экран */
+@media (min-width: 961px) {
+  .sec { padding:60px 0; }
+  h2 { font-size:clamp(34px, 4.2vw, 54px); margin-bottom:20px; }
+  .hero { min-height:auto; height:calc(100vh - 60px); min-height:600px; max-height:860px; padding:24px 0; }
+  .hero h1 { font-size:clamp(48px, 6.4vw, 94px); }
+  .lead { margin:20px 0 24px; }
+  .hero-pic img { width:auto; max-width:440px; height:calc(100vh - 170px); max-height:640px; min-height:420px; }
+  .s1 { top:20px; }
+  .card-pic { aspect-ratio:auto; height:230px; }
+  .card-bd { padding:20px 24px 24px; gap:10px; }
+  .card h3 { font-size:34px; }
+  .card-price { font-size:44px; }
+  .russia { margin-top:28px; }
+  .ru { padding:16px 22px; } .ru b { font-size:36px; }
+  .flip { height:270px; } .flips { gap:20px; }
+  .inside .sub { margin:-6px 0 16px; }
+  .dtabs { margin:14px 0 20px; }
+  .rc .ph { aspect-ratio:auto; height:190px; }
+  .rc .bd { padding:16px 18px 18px; gap:10px; }
+  .rc h3 { font-size:21px; }
+  .rc .q { font-size:20px; padding:10px 14px 10px 60px; }
+  .rc .q img { top:10px; width:38px; height:38px; }
+  .pages .sub { margin-top:-6px; }
+  .strip { padding-top:26px; padding-bottom:20px; }
+  .strip img { width:250px; }
+  .wk { min-height:400px; }
+  .wk-t { padding:40px clamp(24px, 5vw, 70px); }
+  .every-grid li { padding:20px; }
+  .bn-ph { aspect-ratio:16/9; }
+  .album { height:520px; }
+  .gift-in { gap:40px; }
+}
+@media (min-width: 961px) {
+  .sec { padding:52px 0; }
+  .eyebrow { margin-bottom:8px; }
+  .card-pic { height:200px; }
+  .shelf h2 { margin-bottom:18px; }
+  .russia { margin-top:22px; } .russia .eyebrow { margin-bottom:8px; }
+  .rc .ph { height:170px; }
+  .rc .ph img { object-position:center 88%; }
+  .wtabs { margin-bottom:8px; } .wtab { padding:9px 18px; }
+  .dtab { width:54px; height:54px; } .dtabs { margin:10px 0 16px; }
+  .flip { height:250px; }
+  .vs h2 { margin-bottom:18px; }
+  .wk-t h3 { font-size:clamp(32px, 3.4vw, 46px); }
+}
+.rc .ph img { object-position:center 85%; }

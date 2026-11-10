@@ -57,7 +57,7 @@
       var meal = r.meal.split(' · ')[0];
       return '<article class="rc" style="--c:' + c + '"><div class="ph"><img src="img/dishes/' + r.photo + '.jpg" alt="' + esc(r.title) + '" loading="lazy"><span class="meal">' + esc(meal) + '</span>' +
         (r.hit ? '<span class="hit"><b>★</b>хит<br>недели</span>' : '') + '</div>' +
-        '<div class="bd"><h3>' + esc(r.title) + '</h3><div class="meta">' + (r.time ? '<span>⏱ ' + esc(r.time) + '</span>' : '') + (r.level ? '<span>' + esc(r.level) + '</span>' : '') + '<span>на 4 человек</span></div>' +
+        '<div class="bd"><h3>' + esc(r.title) + '</h3><div class="meta">' + (r.time ? '<span>⏱ ' + esc(r.time) + '</span>' : '') + (r.level ? '<span>' + esc(r.level) + '</span>' : '') + '<span>на 4 человека</span></div>' +
         (r.quote ? '<div class="q"><img src="img/ava.jpg" alt=""><small>Ася говорит</small>«' + esc(r.quote) + '»</div>' : '') +
         '</div></article>';
     }).join('');
