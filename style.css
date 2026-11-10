@@ -543,3 +543,6 @@ body, h1, h2, h3, b, .price, .card-price, .wk-n { font-variant-numeric:lining-nu
   .hero h1 { font-size:clamp(44px, min(6.4vw, 10.5vh), 94px); }
   .hero-pic img { height:min(calc(100vh - 170px), 640px); min-height:380px; }
 }
+/* кружочки на обложке — кликабельные */
+a.sticker { text-decoration:none; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease; }
+a.sticker:hover { transform:rotate(0deg) scale(1.06); box-shadow:0 12px 26px rgba(59,42,53,.25); }
