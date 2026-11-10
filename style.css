@@ -537,3 +537,9 @@ body, h1, h2, h3, b, .price, .card-price, .wk-n { font-variant-numeric:lining-nu
   .wk-t h3 { font-size:clamp(32px, 3.4vw, 46px); }
 }
 .rc .ph img { object-position:center 85%; }
+/* обложка: никогда не обрезаем кнопки на невысоком окне */
+@media (min-width: 961px) {
+  .hero { height:auto; max-height:none; min-height:min(calc(100vh - 60px), 860px); }
+  .hero h1 { font-size:clamp(44px, min(6.4vw, 10.5vh), 94px); }
+  .hero-pic img { height:min(calc(100vh - 170px), 640px); min-height:380px; }
+}
