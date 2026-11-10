@@ -72,9 +72,13 @@
   if ($('strip')) {
     var st = ''; for (var i = 1; i <= 14; i++) st += '<img src="img/pages/pg' + (i < 10 ? '0' : '') + i + '.jpg" alt="Страница меню" loading="lazy">';
     $('strip').innerHTML = st;
-    var stp = $('strip'), step = function () { var im = stp.querySelector('img'); return im ? im.getBoundingClientRect().width + 28 : 300; };
-    $('swPrev').addEventListener('click', function () { stp.scrollBy({ left: -step() * 2, behavior: 'smooth' }); });
-    $('swNext').addEventListener('click', function () { stp.scrollBy({ left: step() * 2, behavior: 'smooth' }); });
+    var stp = $('strip'), imgs = stp.querySelectorAll('img');
+    // какая страница сейчас ближе всего к центру
+    var cur = function () { var c = stp.scrollLeft + stp.clientWidth / 2, best = 0, d = 1e9; imgs.forEach(function (im, i) { var m = im.offsetLeft + im.offsetWidth / 2, x = Math.abs(m - c); if (x < d) { d = x; best = i; } }); return best; };
+    // ставим страницу ровно по центру
+    var go = function (dir) { var i = Math.max(0, Math.min(imgs.length - 1, cur() + dir)), im = imgs[i]; stp.scrollTo({ left: im.offsetLeft - (stp.clientWidth - im.offsetWidth) / 2, behavior: 'smooth' }); };
+    $('swPrev').addEventListener('click', function () { go(-1); });
+    $('swNext').addEventListener('click', function () { go(1); });
   }
 
   // недели

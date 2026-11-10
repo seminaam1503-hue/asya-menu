@@ -474,3 +474,11 @@ body { background:var(--paper); }
 .btn:not(.ghost), .gift .btn, .top-btn, .float-buy { background:var(--cherry) !important; color:#fff !important; border-color:var(--cherry) !important; }
 .btn:not(.ghost):hover, .top-btn:hover { background:var(--cherry2) !important; }
 .btn.disabled { opacity:.5; }
+/* листалка: каждая страница встаёт ровно по центру */
+.strip { position:relative; scroll-padding-inline:0; }
+.strip img { scroll-snap-align:center; scroll-snap-stop:always; }
+@media (max-width: 600px) {
+  .strip { gap:18px; padding-left:calc((100vw - 72vw) / 2); padding-right:calc((100vw - 72vw) / 2); }
+  .strip img { width:72vw; }
+  .strip img:nth-child(odd), .strip img:nth-child(even) { transform:none; }
+}
