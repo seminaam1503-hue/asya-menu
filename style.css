@@ -546,3 +546,7 @@ body, h1, h2, h3, b, .price, .card-price, .wk-n { font-variant-numeric:lining-nu
 /* кружочки на обложке — кликабельные */
 a.sticker { text-decoration:none; cursor:pointer; transition:transform .15s ease, box-shadow .15s ease; }
 a.sticker:hover { transform:rotate(0deg) scale(1.06); box-shadow:0 12px 26px rgba(59,42,53,.25); }
+/* новогодняя карточка: кот снова в кадре */
+@media (min-width: 961px) { .card-pic { height:260px; } }
+.card.ny .card-pic img { object-position:center 45%; }
+.card.ny .card-pic img { object-position:center 30%; }
